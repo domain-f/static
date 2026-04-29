@@ -1,28 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kavin Web</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FUEGO — Fire &amp; Flavour</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-<header>
-    <h1>🚀 Welcome to Kavin Web</h1>
-    <p>Deployed with Nginx + Node + Jenkins</p>
-</header>
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span>🔥 Open Daily 12pm–11pm</span>
+      <span>★ Best Restaurant Chennai 2025</span>
+      <span>🌶 Reservations Now Open</span>
+      <span>🔥 Open Daily 12pm–11pm</span>
+      <span>★ Best Restaurant Chennai 2025</span>
+      <span>🌶 Reservations Now Open</span>
+      <span>🔥 Open Daily 12pm–11pm</span>
+      <span>★ Best Restaurant Chennai 2025</span>
+      <span>🌶 Reservations Now Open</span>
+    </div>
+  </div>
 
-<section class="card">
-    <h2>Click the button</h2>
-    <button onclick="showMessage()">Click Me</button>
-    <p id="message"></p>
-</section>
+  <nav class="nav" id="nav">
+    <div class="nav-logo">FUEGO</div>
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#specials">Specials</a></li>
+      <li><a href="#contact">Find Us</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Book a Table</a>
+    <button class="nav-toggle" id="navToggle">&#9776;</button>
+  </nav>
 
-<footer>
-    <p>© 2026 Kavin | DevOps Project</p>
-</footer>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">&#10005;</button>
+    <ul>
+      <li><a href="#menu" class="mm-link">Menu</a></li>
+      <li><a href="#about" class="mm-link">Our Story</a></li>
+      <li><a href="#specials" class="mm-link">Specials</a></li>
+      <li><a href="#contact" class="mm-link">Find Us</a></li>
+      <li><a href="#contact" class="mm-link mm-cta">Book a Table &#8594;</a></li>
+    </ul>
+  </div>
 
-<script src="script.js"></script>
+  <section class="hero" id="home">
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-3"></div>
+    <div class="hero-left">
+      <div class="hero-badge">Est. 2019 &middot; Chennai</div>
+      <h1 class="hero-title">
+        <span class="ht-line ht-outline">FIRE</span>
+        <span class="ht-line ht-amp">&amp;</span>
+        <span class="ht-line ht-outline">FLAVOUR</span>
+      </h1>
+      <p class="hero-sub">Where bold spices meet modern craft. Every dish tells a story of heat, heart, and heritage.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-fire">Explore Menu</a>
+        <a href="#contact" class="btn btn-outline">Reserve Now</a>
+      </div>
+      <div class="hero-awards">
+        <div class="award">&#11088;&#11088;&#11088;&#11088;&#11088; <span>4.9 on Google</span></div>
+        <div class="award-divider"></div>
+        <div class="award">&#127942; <span>Top 10 Restaurants 2025</span></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-plate">
+        <div class="plate-circle">
+          <div class="plate-emoji">🍛</div>
+        </div>
+        <div class="float-tag ft1">Chef's Special</div>
+        <div class="float-tag ft2">🌶 Spicy</div>
+        <div class="float-tag ft3">&#8377;450</div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-text">scroll down</div>
+      <div class="scroll-arrow">&#8595;</div>
+    </div>
+  </section>
+
+  <div class="stats-strip">
+    <div class="stat-item">
+      <span class="stat-num" data-target="120">0</span><span class="stat-unit">+</span>
+      <p>Dishes</p>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="15">0</span><span class="stat-unit">k</span>
+      <p>Happy Guests</p>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="6">0</span><span class="stat-unit"></span>
+      <p>Years of Fire</p>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="8">0</span><span class="stat-unit"></span>
+      <p>Master Chefs</p>
+    </div>
+  </div>
+
+  <section class="menu section" id="menu">
+    <div class="section-header">
+      <div class="section-tag">— Our Menu —</div>
+      <h2 class="section-title">What's <em>Cooking</em></h2>
+    </div>
+    <div class="menu-tabs">
+      <button class="tab active" data-tab="starters">Starters</button>
+      <button class="tab" data-tab="mains">Mains</button>
+      <button class="tab" data-tab="desserts">Desserts</button>
+      <button class="tab" data-tab="drinks">Drinks</button>
+    </div>
+    <div class="menu-panel active" id="tab-starters">
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="mc-emoji">🥘</div>
+          <div class="mc-info">
+            <h3>Lamb Seekh Kebab</h3>
+            <p>Minced lamb with fresh herbs, grilled in our tandoor</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;380</span><span class="mc-spice">🌶🌶🌶</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="mc-emoji">🧅</div>
+          <div class="mc-info">
+            <h3>Crispy Onion Bhaji</h3>
+            <p>Golden fried onion rings with tamarind chutney</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;220</span><span class="mc-spice">🌶🌶</span></div>
+          </div>
+        </div>
+        <div class="menu-card featured">
+          <div class="mc-badge">Chef's Pick</div>
+          <div class="mc-emoji">🔥</div>
+          <div class="mc-info">
+            <h3>Firecracker Prawns</h3>
+            <p>Tiger prawns tossed in our signature ghost pepper sauce</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;520</span><span class="mc-spice">🌶🌶🌶🌶</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="mc-emoji">🫙</div>
+          <div class="mc-info">
+            <h3>Paneer Tikka</h3>
+            <p>Marinated cottage cheese chargrilled with bell peppers</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;290</span><span class="mc-spice">🌶</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-panel" id="tab-mains">
+      <div class="menu-grid">
+        <div class="menu-card featured">
+          <div class="mc-badge">Best Seller</div>
+          <div class="mc-emoji">🍛</div>
+          <div class="mc-info">
+            <h3>Fuego Butter Chicken</h3>
+            <p>Slow-cooked in our secret tomato-cream sauce, 12 hours</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;480</span><span class="mc-spice">🌶🌶🌶</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="mc-emoji">🥩</div>
+          <div class="mc-info">
+            <h3>Rogan Josh</h3>
+            <p>Kashmiri lamb curry with whole spices and saffron</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;550</span><span class="mc-spice">🌶🌶🌶🌶</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="mc-emoji">🌿</div>
+          <div class="mc-info">
+            <h3>Saag Paneer</h3>
+            <p>Fresh spinach and cottage cheese with garlic and ginger</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;340</span><span class="mc-spice">🌶🌶</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="mc-emoji">🍖</div>
+          <div class="mc-info">
+            <h3>Biryani Royale</h3>
+            <p>Aged basmati rice layered with tender mutton and fried onions</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;620</span><span class="mc-spice">🌶🌶🌶</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-panel" id="tab-desserts">
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="mc-emoji">🍮</div>
+          <div class="mc-info">
+            <h3>Gulab Jamun</h3>
+            <p>Soft milk dumplings soaked in rose-cardamom syrup</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;180</span></div>
+          </div>
+        </div>
+        <div class="menu-card featured">
+          <div class="mc-badge">Must Try</div>
+          <div class="mc-emoji">🍨</div>
+          <div class="mc-info">
+            <h3>Kulfi Falooda</h3>
+            <p>Traditional pistachio kulfi with rose vermicelli and basil seeds</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;240</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="mc-emoji">🫓</div>
+          <div class="mc-info">
+            <h3>Shahi Tukda</h3>
+            <p>Fried bread pudding with rabri and crushed pistachios</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;210</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="mc-emoji">🍵</div>
+          <div class="mc-info">
+            <h3>Masala Chai Creme Brulee</h3>
+            <p>French classic with a spiced Indian twist</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;280</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-panel" id="tab-drinks">
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="mc-emoji">🥭</div>
+          <div class="mc-info">
+            <h3>Mango Lassi</h3>
+            <p>Thick Alphonso mango blended with chilled yoghurt</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;160</span></div>
+          </div>
+        </div>
+        <div class="menu-card featured">
+          <div class="mc-badge">Signature</div>
+          <div class="mc-emoji">🍹</div>
+          <div class="mc-info">
+            <h3>Fuego Punch</h3>
+            <p>Watermelon, jalapeno, lime and mint — sweet heat in a glass</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;220</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="mc-emoji">🌹</div>
+          <div class="mc-info">
+            <h3>Rose Sharbat</h3>
+            <p>Cold pressed rose petals with basil seeds and lemon</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;140</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="mc-emoji">☕</div>
+          <div class="mc-info">
+            <h3>Filter Coffee</h3>
+            <p>South Indian decoction served in traditional dabarah</p>
+            <div class="mc-footer"><span class="mc-price">&#8377;80</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+    <div class="about-left" data-animate="fade-right">
+      <div class="about-img">
+        <div class="about-img-inner">
+          <div class="chef-emoji">👨‍🍳</div>
+          <div class="chef-label">Chef Arjun Mehta<br/><span>Head Chef &amp; Founder</span></div>
+        </div>
+        <div class="about-img-badge">20+ Years of Passion</div>
+      </div>
+    </div>
+    <div class="about-right" data-animate="fade-left">
+      <div class="section-tag">— Our Story —</div>
+      <h2 class="section-title">Born from <em>Obsession</em></h2>
+      <p>FUEGO started as a dream in a tiny kitchen in Chennai — Chef Arjun Mehta spending sleepless nights perfecting spice blends passed down through four generations.</p>
+      <p>Today, we serve over 300 guests a day, but every dish is still made with the same obsessive care. We source our spices directly from Chettinad, Coorg, and Kashmir.</p>
+      <div class="about-values">
+        <div class="value-item"><span class="vi-icon">🌿</span><div><h4>Farm Fresh</h4><p>Ingredients sourced daily from local farms</p></div></div>
+        <div class="value-item"><span class="vi-icon">🔥</span><div><h4>Wood Fire</h4><p>Every tandoor dish cooked on real wood fire</p></div></div>
+        <div class="value-item"><span class="vi-icon">❤️</span><div><h4>Made with Love</h4><p>No MSG, no shortcuts — just honest cooking</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="specials section" id="specials">
+    <div class="section-header">
+      <div class="section-tag">— Limited Time —</div>
+      <h2 class="section-title">Today's <em>Specials</em></h2>
+    </div>
+    <div class="specials-grid">
+      <div class="special-card sc-red" data-animate="fade-up" data-delay="0">
+        <div class="sc-day">MON–WED</div>
+        <div class="sc-emoji">🍱</div>
+        <h3>Thali Feast</h3>
+        <p>12-item grand thali with unlimited rice and bread</p>
+        <div class="sc-price"><del>&#8377;680</del> <strong>&#8377;450</strong></div>
+      </div>
+      <div class="special-card sc-yellow" data-animate="fade-up" data-delay="150">
+        <div class="sc-day">WEEKENDS</div>
+        <div class="sc-emoji">👨‍👩‍👧‍👦</div>
+        <h3>Family Combo</h3>
+        <p>4 mains + 4 breads + 2 desserts + 4 drinks</p>
+        <div class="sc-price"><del>&#8377;2400</del> <strong>&#8377;1599</strong></div>
+      </div>
+      <div class="special-card sc-green" data-animate="fade-up" data-delay="300">
+        <div class="sc-day">DAILY 12–3pm</div>
+        <div class="sc-emoji">☀️</div>
+        <h3>Lunch Express</h3>
+        <p>Quick 3-course set lunch for the working crowd</p>
+        <div class="sc-price"><del>&#8377;480</del> <strong>&#8377;299</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials section">
+    <div class="section-header">
+      <div class="section-tag">— Reviews —</div>
+      <h2 class="section-title">What People <em>Say</em></h2>
+    </div>
+    <div class="testi-track" id="testiTrack">
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"The Firecracker Prawns changed my life. I've been coming every week for 6 months. FUEGO is not a restaurant — it's a religion."</p>
+        <div class="testi-author">— Priya R., Chennai</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Best biryani I've had outside of Hyderabad. The ambiance, the service, the food — everything is top class. Highly recommend!"</p>
+        <div class="testi-author">— Karthik M., Bangalore</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Brought my international clients here and they were blown away. FUEGO represents Indian cuisine at its absolute finest."</p>
+        <div class="testi-author">— Ananya S., Mumbai</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"The Kulfi Falooda is a masterpiece. Chef Arjun came to our table personally. This is why FUEGO is our family's favourite spot."</p>
+        <div class="testi-author">— Ravi K., Chennai</div>
+      </div>
+    </div>
+    <div class="testi-dots" id="testiDots"></div>
+  </section>
+
+  <section class="contact section" id="contact">
+    <div class="contact-left" data-animate="fade-right">
+      <div class="section-tag">— Find Us —</div>
+      <h2 class="section-title">Come <em>Eat</em> With Us</h2>
+      <div class="contact-info">
+        <div class="ci-item">
+          <span class="ci-icon">📍</span>
+          <div><h4>Address</h4><p>42 Anna Salai, Nungambakkam<br/>Chennai, Tamil Nadu 600006</p></div>
+        </div>
+        <div class="ci-item">
+          <span class="ci-icon">🕐</span>
+          <div><h4>Hours</h4><p>Monday – Friday: 12pm – 11pm<br/>Saturday – Sunday: 11am – 11:30pm</p></div>
+        </div>
+        <div class="ci-item">
+          <span class="ci-icon">📞</span>
+          <div><h4>Reservations</h4><p>+91 98765 43210<br/>hello@fuego.restaurant</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right" data-animate="fade-left">
+      <div class="booking-card">
+        <h3>Reserve Your Table</h3>
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Arjun Sharma" id="bookName"/>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+91 98765 43210" id="bookPhone"/>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" id="bookDate"/>
+          </div>
+          <div class="form-group">
+            <label>Guests</label>
+            <select id="bookGuests">
+              <option>1 Person</option>
+              <option>2 People</option>
+              <option selected>4 People</option>
+              <option>6 People</option>
+              <option>8+ People</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-fire btn-full" id="bookBtn">Confirm Reservation 🔥</button>
+        <div class="booking-confirm" id="bookingConfirm">✅ Table booked! We'll call you to confirm.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">FUEGO</div>
+        <p>Fire &amp; Flavour since 2019</p>
+        <div class="footer-social">
+          <a href="#">📸</a><a href="#">🐦</a><a href="#">👍</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#specials">Specials</a></li>
+          <li><a href="#contact">Find Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="#">Catering</a></li>
+          <li><a href="#">Private Events</a></li>
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FUEGO Restaurant. All rights reserved.</span>
+      <span>Made with 🔥 in Chennai</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
