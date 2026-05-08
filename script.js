@@ -142,9 +142,8 @@ if (bookBtn) {
     bookBtn.disabled = true;
 
     setTimeout(() => {
-      bookBtn.style.display = 'none';
-      bookingConfirm.style.display = 'block';
-    }, 1200);
+  window.location.href = "thankyou.html";
+}, 1200);
   });
 }
 
