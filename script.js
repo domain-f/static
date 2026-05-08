@@ -5,11 +5,11 @@ if (bookBtn) {
 
   bookBtn.addEventListener('click', async () => {
 
-    const name  = document.getElementById('bookName').value.trim();
+    const name = document.getElementById('bookName').value.trim();
     const phone = document.getElementById('bookPhone').value.trim();
-    const date  = document.getElementById('bookDate').value;
+    const date = document.getElementById('bookDate').value;
 
-    // validation
+    // Validation
     if (!name || !phone || !date) {
 
       bookBtn.textContent = '⚠️ Please fill all fields';
@@ -26,8 +26,8 @@ if (bookBtn) {
       bookBtn.textContent = 'Booking...';
       bookBtn.disabled = true;
 
-      // API call to backend server
-      const response = await fetch('http://10.0.11.50:5000/api/book', {
+      // 🔥 Backend API Call
+      const response = await fetch('http://35.176.246.29:5000/api/book', {
 
         method: 'POST',
 
@@ -38,15 +38,17 @@ if (bookBtn) {
         body: JSON.stringify({
           name,
           phone,
-          date
+          date,
+          guests: 2
         })
+
       });
 
       const data = await response.json();
 
       console.log(data);
 
-      // success redirect
+      // Success
       if (data.success) {
 
         window.location.href = 'thankyou.html';
@@ -61,7 +63,7 @@ if (bookBtn) {
 
     } catch (error) {
 
-      console.log(error);
+      console.error(error);
 
       alert('Server error');
 
